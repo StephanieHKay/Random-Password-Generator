@@ -6,12 +6,23 @@ import string
 
 def generate_random_password():
     while True:
-        #ask user for lenght and number of passwords
+        #ask user for lenght and number of passwords and  which characters can make up the password  
         length = int(input("Enter a required password length: \n"))
         no_of_passwords = int (input("How many passwords do you want to generate: \n"))
-        
-        #which characters can make up the password
-        charac= string.ascii_letters + string.punctuation + string.digits
+        while True:
+            LPD = input("Include letters, numbers and punctuation? yes/no ")
+            if LPD[0].lower() == "y":
+              charac= string.ascii_letters + string.punctuation + string.digits
+              break
+
+            LD = input("Include letters and numbers? yes/no ")
+            if LD[0].lower() == "y":
+              charac= string.digits + string.ascii_letters
+              break
+            LP = input("Include letters and punctuation? yes/no ")
+            if LP[0].lower() == "y":
+              charac= string.ascii_letters + string.punctuation
+              break    
         
         #generate n number of secure passwords
         for n in range(no_of_passwords):
