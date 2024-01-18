@@ -2,7 +2,7 @@
 
 A short terminal python script for generating random passwords.
 
-Takes in user input for:
+Takes user input for:
 - length of password
 - number of passwords required
 - characteristics of password (letters and/or numbers and/or punctuation )
